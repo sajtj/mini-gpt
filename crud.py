@@ -4,9 +4,9 @@ from jose import jwt, JWTError
 from datetime import datetime, timedelta
 from fastapi.security import OAuth2PasswordBearer
 from fastapi import Depends, HTTPException, status
-from database import get_db
-from models import User, Query
-from schemas import UserBase
+from .database import get_db
+from .models import User, Query
+from .schemas import UserBase
 
 
 SECRET_KEY = "09d9f1d6a40b4b8eb7e49985f431bbbe"

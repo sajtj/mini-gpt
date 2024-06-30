@@ -1,10 +1,10 @@
 from sqlalchemy.ext.asyncio import AsyncSession
 from fastapi import FastAPI, Depends, HTTPException, status
 from datetime import timedelta
-from schemas import UserBase, Token, Query, QueryBase
-from langchain_handeler import get_llm_response
-from database import get_db
-from crud import authenticate_user, create_access_token, get_current_user, get_user, create_user, get_queries, create_query, ACCESS_TOKEN_EXPIRE_MINUTES
+from .schemas import UserBase, Token, Query, QueryBase
+from .langchain_handeler import get_llm_response
+from .database import get_db
+from .crud import authenticate_user, create_access_token, get_current_user, get_user, create_user, get_queries, create_query, ACCESS_TOKEN_EXPIRE_MINUTES
 
 app = FastAPI()
 
